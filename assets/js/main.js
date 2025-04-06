@@ -1,15 +1,15 @@
 /**
  * CodeLean Education - Main JavaScript File
- * Version: 1.1.0
+ * Version: 1.2.0
  * Author: CodeLean Team
+ * Updated: April 06, 2025
  */
 
 // Cache DOM elements
 const DOM = {
-    header: null,
-    footer: null,
     hamburger: null,
     navMenu: null,
+    navLinks: null,
     userDropdown: null,
     dropdownMenu: null,
     logoutBtn: null,
@@ -34,6 +34,7 @@ const DOM = {
     loadTemplates();
     checkAuthState();
     checkProtectedPages();
+    highlightActiveNav();
   }
   
   /**
@@ -41,7 +42,8 @@ const DOM = {
    */
   function cacheDOM() {
     DOM.hamburger = document.querySelector('.hamburger');
-    DOM.navMenu = document.querySelector('.nav-menu'); 
+    DOM.navMenu = document.querySelector('.nav-menu');
+    DOM.navLinks = document.querySelectorAll('.nav-list a'); // Lưu tất cả nav links
     DOM.userDropdown = document.querySelector('.user-dropdown');
     DOM.dropdownMenu = document.querySelector('.dropdown-menu');
     DOM.logoutBtn = document.getElementById('logout');
@@ -52,32 +54,39 @@ const DOM = {
    * Bind event listeners
    */
   function bindEvents() {
+    // Hamburger menu toggle
     if (DOM.hamburger) {
       DOM.hamburger.addEventListener('click', toggleMobileMenu);
     }
   
+    // User dropdown toggle
     if (DOM.userDropdown) {
       DOM.userDropdown.addEventListener('click', toggleUserDropdown);
     }
   
+    // Logout button
     if (DOM.logoutBtn) {
       DOM.logoutBtn.addEventListener('click', handleLogout);
     }
   
+    // Logo link
     if (DOM.logoLink) {
-      DOM.logoLink.addEventListener('click', handleLogoClick); // Sửa từ logoutBtn thành logoLink
+      DOM.logoLink.addEventListener('click', handleLogoClick);
     }
   
+    // Close dropdown when clicking outside
     document.addEventListener('click', (e) => {
-      if (!e.target.closest('.user-dropdown') && DOM.dropdownMenu) {
+      if (!e.target.closest('.user-dropdown') && DOM.dropdownMenu?.classList.contains('active')) {
         DOM.dropdownMenu.classList.remove('active');
       }
     });
   
+    // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', smoothScroll);
     });
   
+    // Course card hover effects
     document.querySelectorAll('.course-card').forEach(card => {
       card.addEventListener('mouseenter', handleCourseCardHover);
       card.addEventListener('mouseleave', handleCourseCardLeave);
@@ -85,11 +94,28 @@ const DOM = {
   }
   
   /**
+   * Highlight active navigation item based on current URL
+   */
+  function highlightActiveNav() {
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    if (DOM.navLinks) {
+      DOM.navLinks.forEach(link => {
+        const href = link.getAttribute('href');
+        if (href === currentPage) {
+          link.classList.add('active');
+        } else {
+          link.classList.remove('active');
+        }
+      });
+    }
+  }
+  
+  /**
    * Load HTML templates (header, footer)
    */
   function loadTemplates() {
-    loadHTML('header', '/layout/header.html');
-    loadHTML('footer', '/layout/footer.html');
+    loadHTML('header', 'layout/header.html');
+    loadHTML('footer', 'layout/footer.html');
   }
   
   /**
@@ -106,7 +132,7 @@ const DOM = {
   
     fetch(file)
       .then(response => {
-        if (!response.ok) throw new Error('Network response was not ok');
+        if (!response.ok) throw new Error(`Failed to load ${file}`);
         return response.text();
       })
       .then(data => {
@@ -116,8 +142,7 @@ const DOM = {
       })
       .catch(error => {
         console.error(`Error loading ${file}:`, error);
-        if (id === 'header') document.getElementById(id).innerHTML = '<div>Header failed to load</div>';
-        if (id === 'footer') document.getElementById(id).innerHTML = '<div>Footer failed to load</div>';
+        document.getElementById(id).innerHTML = `<div>${id} failed to load</div>`;
       });
   }
   
@@ -125,9 +150,10 @@ const DOM = {
    * Initialize header events after loading
    */
   function initHeaderEvents() {
-    cacheDOM();
-    bindEvents();
+    cacheDOM(); // Tái khởi tạo DOM
+    bindEvents(); // Gắn lại sự kiện
     checkAuthState();
+    highlightActiveNav();
   }
   
   /**
@@ -143,8 +169,10 @@ const DOM = {
    * @param {Event} e - Click event
    */
   function toggleUserDropdown(e) {
-    e.preventDefault();
-    DOM.dropdownMenu.classList.toggle('active');
+    e.stopPropagation(); // Ngăn sự kiện click lan ra ngoài
+    if (DOM.dropdownMenu) {
+      DOM.dropdownMenu.classList.toggle('active');
+    }
   }
   
   /**
@@ -156,7 +184,8 @@ const DOM = {
     localStorage.removeItem('isLoggedIn');
     localStorage.removeItem('userToken');
     localStorage.removeItem('userData');
-    window.location.href = '/index.html';
+    state.isLoggedIn = false;
+    window.location.href = 'index.html';
   }
   
   /**
@@ -165,7 +194,7 @@ const DOM = {
    */
   function handleLogoClick(e) {
     e.preventDefault();
-    window.location.href = state.isLoggedIn ? '/home.html' : '/index.html';
+    window.location.href = state.isLoggedIn ? 'home.html' : 'index.html';
   }
   
   /**
@@ -204,15 +233,13 @@ const DOM = {
    * Check protected pages
    */
   function checkProtectedPages() {
-    const protectedPages = ['/home.html', '/profile.html', '/settings.html'];
-    const currentPage = window.location.pathname.split('/').pop();
+    const protectedPages = ['home.html', 'profile.html', 'settings.html'];
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
   
     if (state.isLoggedIn && currentPage === 'index.html') {
-      window.location.href = '/home.html';
-    }
-  
-    if (!state.isLoggedIn && protectedPages.includes(currentPage)) {
-      window.location.href = '/index.html';
+      window.location.href = 'home.html';
+    } else if (!state.isLoggedIn && protectedPages.includes(currentPage)) {
+      window.location.href = 'index.html';
     }
   }
   
@@ -231,7 +258,6 @@ const DOM = {
         behavior: 'smooth',
         block: 'start'
       });
-      
       if (history.pushState) {
         history.pushState(null, null, targetId);
       } else {
@@ -245,9 +271,7 @@ const DOM = {
    */
   function handleCourseCardHover() {
     const img = this.querySelector('.course-image img');
-    if (img) {
-      img.style.transform = 'scale(1.05)';
-    }
+    if (img) img.style.transform = 'scale(1.05)';
   }
   
   /**
@@ -255,15 +279,13 @@ const DOM = {
    */
   function handleCourseCardLeave() {
     const img = this.querySelector('.course-image img');
-    if (img) {
-      img.style.transform = 'scale(1)';
-    }
+    if (img) img.style.transform = 'scale(1)';
   }
   
   // Initialize the app when DOM is loaded
   document.addEventListener('DOMContentLoaded', init);
   
-  // Export for testing purposes (if needed)
+  // Export for testing purposes
   if (typeof module !== 'undefined' && module.exports) {
     module.exports = {
       init,
@@ -274,6 +296,7 @@ const DOM = {
       toggleUserDropdown,
       handleLogout,
       checkAuthState,
-      smoothScroll
+      smoothScroll,
+      highlightActiveNav
     };
   }

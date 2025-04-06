@@ -169,6 +169,15 @@ ul {
   color: #6c5ce7;
 }
 
+.nav-list a.active {
+  color: #6c5ce7; /* Màu nổi bật khi active */
+  font-weight: 600; /* Đậm hơn */
+}
+
+.nav-list a.active::after {
+  width: 100%; /* Gạch chân luôn hiển thị khi active */
+}
+
 .nav-list a::after {
   content: '';
   position: absolute;
