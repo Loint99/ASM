@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hồ sơ - CodeLean</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="/assets/css/auth.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="logged-in">
+    <div id="header"></div>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="profile-page">
+                <div class="profile-header">
+                    <div class="profile-avatar">
+                        <img src="/assets/images/avatar-1.png" alt="Nguyễn Văn A">
+                        <button class="edit-avatar"><i class="fas fa-camera"></i></button>
+                    </div>
+                    
+                    <div class="profile-info">
+                        <h1>Nguyễn Văn A</h1>
+                        <p class="profile-title">Lập trình viên Frontend</p>
+                        <p class="profile-location"><i class="fas fa-map-marker-alt"></i> Hà Nội, Việt Nam</p>
+                        
+                        <div class="profile-stats">
+                            <div class="stat-item">
+                                <div class="stat-value">124</div>
+                                <div class="stat-label">Xếp hạng</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value">1,250</div>
+                                <div class="stat-label">Điểm</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value">24</div>
+                                <div class="stat-label">Bài tập</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="profile-actions">
+                        <button class="btn btn-outline"><i class="fas fa-cog"></i> Cài đặt</button>
+                        <button class="btn btn-primary"><i class="fas fa-share-alt"></i> Chia sẻ</button>
+                    </div>
+                </div>
+                
+                <div class="profile-grid">
+                    <div class="profile-main">
+                        <div class="profile-section">
+                            <div class="section-header">
+                                <h2>Giới thiệu</h2>
+                                <button class="btn-edit"><i class="fas fa-pencil-alt"></i> Chỉnh sửa</button>
+                            </div>
+                            
+                            <div class="section-content">
+                                <p>Xin chào! Tôi là Nguyễn Văn A, một lập trình viên Frontend với 2 năm kinh nghiệm làm việc với ReactJS và VueJS. Tôi đang học tập trên CodeLean để nâng cao kỹ năng lập trình của mình.</p>
+                                
+                                <div class="about-item">
+                                    <i class="fas fa-briefcase"></i>
+                                    <span>Lập trình viên tại <strong>FPT Software</strong></span>
+                                </div>
+                                
+                                <div class="about-item">
+                                    <i class="fas fa-graduation-cap"></i>
+                                    <span>Tốt nghiệp <strong>Đại học Bách Khoa Hà Nội</strong></span>
+                                </div>
+                                
+                                <div class="about-item">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    <span>Tham gia <strong>15/03/2023</strong></span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="profile-section">
+                            <div class="section-header">
+                                <h2>Hoạt động gần đây</h2>
+                            </div>
+                            
+                            <div class="activity-list">
+                                <div class="activity-item">
+                                    <div class="activity-icon">
+                                        <i class="fas fa-check-circle"></i>
+                                    </div>
+                                    <div class="activity-content">
+                                        <p>Đã hoàn thành bài tập <a href="#">Đảo ngược chuỗi</a></p>
+                                        <div class="activity-meta">Hôm nay, 14:30</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="activity-item">
+                                    <div class="activity-icon">
+                                        <i class="fas fa-medal"></i>
+                                    </div>
+                                    <div class="activity-content">
+                                        <p>Đạt được huy hiệu <strong>Người mới bắt đầu</strong></p>
+                                        <div class="activity-meta">Hôm qua, 09:15</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="activity-item">
+                                    <div class="activity-icon">
+                                        <i class="fas fa-book"></i>
+                                    </div>
+                                    <div class="activity-content">
+                                        <p>Đã hoàn thành bài học <a href="#">Hàm trong Python</a></p>
+                                        <div class="activity-meta">2 ngày trước</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="activity-item">
+                                    <div class="activity-icon">
+                                        <i class="fas fa-trophy"></i>
+                                    </div>
+                                    <div class="activity-content">
+                                        <p>Tham gia cuộc thi <a href="#">CodeBattle Mùa Hè</a></p>
+                                        <div class="activity-meta">1 tuần trước</div>
+                                    </div>
+                                </div>
+                                
+                                <!-- More activities would go here -->
+                            </div>
+                        </div>
+                        
+                        <div class="profile-section">
+                            <div class="section-header">
+                                <h2>Khóa học của tôi</h2>
+                                <a href="/courses.html" class="btn-view-all">Xem tất cả</a>
+                            </div>
+                            
+                            <div class="courses-grid">
+                                <div class="course-card">
+                                    <div class="course-progress">
+                                        <div class="progress-bar" style="width: 65%"></div>
+                                        <span>65% hoàn thành</span>
+                                    </div>
+                                    <div class="course-image">
+                                        <img src="/assets/images/python.png" alt="Lập trình Python cơ bản">
+                                        <span class="course-level">Cơ bản</span>
+                                    </div>
+                                    <div class="course-content">
+                                        <h3><a href="/course-detail-1.html">Lập trình Python cơ bản</a></h3>
+                                        <p class="course-description">Học Python từ con số 0, làm chủ ngôn ngữ lập trình phổ biến nhất hiện nay.</p>
+                                        <div class="course-meta">
+                                            <span><i class="fas fa-book-open"></i> 12/20 bài học</span>
+                                            <span><i class="fas fa-clock"></i> 15h học</span>
+                                        </div>
+                                        <a href="/course-detail-1.html" class="btn btn-primary">Tiếp tục học</a>
+                                    </div>
+                                </div>
+                                
+                                <div class="course-card">
+                                    <div class="course-progress">
+                                        <div class="progress-bar" style="width: 30%"></div>
+                                        <span>30% hoàn thành</span>
+                                    </div>
+                                    <div class="course-image">
+                                        <img src="/assets/images/javascript.png" alt="Web Frontend với ReactJS">
+                                        <span class="course-level">Trung cấp</span>
+                                    </div>
+                                    <div class="course-content">
+                                        <h3><a href="#">Web Frontend với JavaScript</a></h3>
+                                        <p class="course-description">Xây dựng ứng dụng web hiện đại với ReactJS, Redux và các công nghệ liên quan.</p>
+                                        <div class="course-meta">
+                                            <span><i class="fas fa-book-open"></i> 6/20 bài học</span>
+                                            <span><i class="fas fa-clock"></i> 8h học</span>
+                                        </div>
+                                        <a href="#" class="btn btn-primary">Tiếp tục học</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="profile-sidebar">
+                        <div class="sidebar-card">
+                            <h3>Kỹ năng</h3>
+                            <div class="skills-list">
+                                <div class="skill-item">
+                                    <span>Python</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-level" style="width: 70%"></div>
+                                    </div>
+                                </div>
+                                
+                                <div class="skill-item">
+                                    <span>JavaScript</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-level" style="width: 60%"></div>
+                                    </div>
+                                </div>
+                                
+                                <div class="skill-item">
+                                    <span>HTML/CSS</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-level" style="width: 80%"></div>
+                                    </div>
+                                </div>
+                                
+                                <div class="skill-item">
+                                    <span>ReactJS</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-level" style="width: 50%"></div>
+                                    </div>
+                                </div>
+                                
+                                <button class="btn-add-skill"><i class="fas fa-plus"></i> Thêm kỹ năng</button>
+                            </div>
+                        </div>
+                        
+                        <div class="sidebar-card">
+                            <h3>Thành tích</h3>
+                            <div class="badges-list">
+                                <div class="badge-item">
+                                    <div class="badge-icon gold">
+                                        <i class="fas fa-medal"></i>
+                                    </div>
+                                    <div class="badge-info">
+                                        <h4>Người mới bắt đầu</h4>
+                                        <p>Hoàn thành 10 bài tập đầu tiên</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="badge-item">
+                                    <div class="badge-icon silver">
+                                        <i class="fas fa-fire"></i>
+                                    </div>
+                                    <div class="badge-info">
+                                        <h4>Chuỗi 7 ngày</h4>
+                                        <p>Học liên tục trong 7 ngày</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="badge-item">
+                                    <div class="badge-icon bronze">
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <div class="badge-info">
+                                        <h4>Ngôi sao đang lên</h4>
+                                        <p>Đạt top 50% bảng xếp hạng</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="sidebar-card">
+                            <h3>Liên kết</h3>
+                            <div class="social-links">
+                                <a href="#" class="social-link"><i class="fab fa-github"></i> GitHub</a>
+                                <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+                                <a href="#" class="social-link"><i class="fab fa-twitter"></i> Twitter</a>
+                                <a href="#" class="social-link"><i class="fas fa-globe"></i> Website</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer"></div>
+
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/profile.js"></script>
+</body>
+</html>

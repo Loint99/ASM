@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bảng xếp hạng - CodeLean</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="/assets/css/auth.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="logged-in">
+    <div id="header"></div>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="leaderboard-page">
+                <div class="page-header">
+                    <h1>Bảng xếp hạng</h1>
+                    <p>Top những lập trình viên hàng đầu trên CodeLean</p>
+                </div>
+                
+                <div class="leaderboard-tabs">
+                    <ul class="tab-nav">
+                        <li class="active" data-tab="all-time">Tất cả</li>
+                        <li data-tab="monthly">Tháng này</li>
+                        <li data-tab="weekly">Tuần này</li>
+                        <li data-tab="competition">Thi đấu</li>
+                    </ul>
+                    
+                    <div class="tab-content active" id="all-time">
+                        <div class="leaderboard-table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Hạng</th>
+                                        <th>Thành viên</th>
+                                        <th>Điểm</th>
+                                        <th>Bài tập</th>
+                                        <th>Thi đấu</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="top-1">
+                                        <td>1</td>
+                                        <td>
+                                            <div class="user-info">
+                                                <img src="/assets/images/avatar-1.png" alt="Nguyễn Văn A">
+                                                <span>Nguyễn Văn A</span>
+                                            </div>
+                                        </td>
+                                        <td>12,450</td>
+                                        <td>248</td>
+                                        <td>15</td>
+                                    </tr>
+                                    
+                                    <tr class="top-2">
+                                        <td>2</td>
+                                        <td>
+                                            <div class="user-info">
+                                                <img src="/assets/images/avatar-2.png" alt="Trần Thị B">
+                                                <span>Trần Thị B</span>
+                                            </div>
+                                        </td>
+                                        <td>11,870</td>
+                                        <td>235</td>
+                                        <td>12</td>
+                                    </tr>
+                                    
+                                    <tr class="top-3">
+                                        <td>3</td>
+                                        <td>
+                                            <div class="user-info">
+                                                <img src="/assets/images/avatar-1.png" alt="Lê Văn C">
+                                                <span>Lê Văn C</span>
+                                            </div>
+                                        </td>
+                                        <td>10,920</td>
+                                        <td>218</td>
+                                        <td>14</td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td>4</td>
+                                        <td>
+                                            <div class="user-info">
+                                                <img src="/assets/images/avatar-2.png" alt="Phạm Thị D">
+                                                <span>Phạm Thị D</span>
+                                            </div>
+                                        </td>
+                                        <td>9,750</td>
+                                        <td>195</td>
+                                        <td>10</td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td>5</td>
+                                        <td>
+                                            <div class="user-info">
+                                                <img src="/assets/images/avatar-2.png" alt="Hoàng Văn E">
+                                                <span>Hoàng Văn E</span>
+                                            </div>
+                                        </td>
+                                        <td>8,930</td>
+                                        <td>178</td>
+                                        <td>8</td>
+                                    </tr>
+                                    
+                                    <!-- More rows would go here -->
+                                    
+                                    <tr class="current-user">
+                                        <td>124</td>
+                                        <td>
+                                            <div class="user-info">
+                                                <img src="/assets/images/avatar-1.png" alt="Bạn">
+                                                <span>Bạn</span>
+                                            </div>
+                                        </td>
+                                        <td>1,250</td>
+                                        <td>24</td>
+                                        <td>2</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                        <div class="pagination">
+                            <a href="#" class="page-item disabled"><i class="fas fa-chevron-left"></i></a>
+                            <a href="#" class="page-item active">1</a>
+                            <a href="#" class="page-item">2</a>
+                            <a href="#" class="page-item">3</a>
+                            <a href="#" class="page-item">4</a>
+                            <a href="#" class="page-item">5</a>
+                            <a href="#" class="page-item"><i class="fas fa-chevron-right"></i></a>
+                        </div>
+                    </div>
+                    
+                    <!-- Other tab contents would be similar -->
+                </div>
+                
+                <div class="leaderboard-stats">
+                    <div class="stats-card">
+                        <h3>Thống kê của bạn</h3>
+                        <div class="stats-grid">
+                            <div class="stat-item">
+                                <div class="stat-value">124</div>
+                                <div class="stat-label">Xếp hạng</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value">1,250</div>
+                                <div class="stat-label">Điểm</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value">24</div>
+                                <div class="stat-label">Bài tập</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value">2</div>
+                                <div class="stat-label">Thi đấu</div>
+                            </div>
+                        </div>
+                        
+                        <div class="progress-chart">
+                            <h4>Tiến trình tháng này</h4>
+                            <div class="chart-bar">
+                                <div class="bar-label">Tuần 1</div>
+                                <div class="bar-container">
+                                    <div class="bar" style="width: 30%"></div>
+                                </div>
+                                <div class="bar-value">30</div>
+                            </div>
+                            <div class="chart-bar">
+                                <div class="bar-label">Tuần 2</div>
+                                <div class="bar-container">
+                                    <div class="bar" style="width: 65%"></div>
+                                </div>
+                                <div class="bar-value">65</div>
+                            </div>
+                            <div class="chart-bar">
+                                <div class="bar-label">Tuần 3</div>
+                                <div class="bar-container">
+                                    <div class="bar" style="width: 40%"></div>
+                                </div>
+                                <div class="bar-value">40</div>
+                            </div>
+                            <div class="chart-bar">
+                                <div class="bar-label">Tuần 4</div>
+                                <div class="bar-container">
+                                    <div class="bar" style="width: 15%"></div>
+                                </div>
+                                <div class="bar-value">15</div>
+                            </div>
+                        </div>
+                        
+                        <a href="/practice.html" class="btn btn-primary btn-block">Luyện tập ngay</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer"></div>
+
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/leaderboard.js"></script>
+</body>
+</html>

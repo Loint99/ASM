@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cài đặt - CodeLean</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="/assets/css/auth.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="logged-in">
+    <div id="header"></div>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="settings-page">
+                <div class="page-header">
+                    <h1>Cài đặt tài khoản</h1>
+                    <p>Quản lý thông tin cá nhân và cài đặt tài khoản của bạn</p>
+                </div>
+                
+                <div class="settings-grid">
+                    <div class="settings-sidebar">
+                        <ul class="settings-menu">
+                            <li class="active" data-tab="profile"><i class="fas fa-user"></i> Hồ sơ</li>
+                            <li data-tab="account"><i class="fas fa-lock"></i> Tài khoản</li>
+                            <li data-tab="notifications"><i class="fas fa-bell"></i> Thông báo</li>
+                            <li data-tab="privacy"><i class="fas fa-shield-alt"></i> Bảo mật</li>
+                            <li data-tab="billing"><i class="fas fa-credit-card"></i> Thanh toán</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="settings-main">
+                        <div class="settings-content active" id="profile">
+                            <h2>Thông tin hồ sơ</h2>
+                            <p class="section-description">Cập nhật thông tin cá nhân và ảnh đại diện của bạn.</p>
+                            
+                            <form class="settings-form">
+                                <div class="form-group avatar-group">
+                                    <label>Ảnh đại diện</label>
+                                    <div class="avatar-upload">
+                                        <div class="avatar-preview">
+                                            <img src="/assets/images/avatar-1.png" alt="Avatar" id="avatarPreview">
+                                        </div>
+                                        <div class="avatar-actions">
+                                            <button type="button" class="btn btn-outline btn-small" id="changeAvatar">Thay đổi</button>
+                                            <button type="button" class="btn btn-outline btn-small" id="removeAvatar">Xóa</button>
+                                            <input type="file" id="avatarInput" accept="image/*" style="display: none;">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="fullName">Họ và tên</label>
+                                    <input type="text" id="fullName" value="Nguyễn Văn A">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="username">Tên người dùng</label>
+                                    <input type="text" id="username" value="nguyenvana">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="bio">Giới thiệu bản thân</label>
+                                    <textarea id="bio" rows="3">Xin chào! Tôi là Nguyễn Văn A, một lập trình viên Frontend với 2 năm kinh nghiệm làm việc với ReactJS và VueJS.</textarea>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="location">Địa điểm</label>
+                                    <input type="text" id="location" value="Hà Nội, Việt Nam">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="website">Website</label>
+                                    <input type="url" id="website" value="https://nguyenvana.dev">
+                                </div>
+                                
+                                <div class="form-actions">
+                                    <button type="button" class="btn btn-outline">Hủy</button>
+                                    <button type="submit" class="btn btn-primary">Lưu thay đổi</button>
+                                </div>
+                            </form>
+                        </div>
+                        
+                        <div class="settings-content" id="account">
+                            <h2>Cài đặt tài khoản</h2>
+                            <p class="section-description">Quản lý thông tin đăng nhập và email của bạn.</p>
+                            
+                            <form class="settings-form">
+                                <div class="form-group">
+                                    <label for="currentEmail">Email hiện tại</label>
+                                    <input type="email" id="currentEmail" value="nguyenvana@example.com" disabled>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="newEmail">Email mới</label>
+                                    <input type="email" id="newEmail" placeholder="Nhập email mới">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="currentPassword">Mật khẩu hiện tại</label>
+                                    <input type="password" id="currentPassword" placeholder="Nhập mật khẩu hiện tại">
+                                </div>
+                                
+                                <div class="form-actions">
+                                    <button type="button" class="btn btn-outline">Hủy</button>
+                                    <button type="submit" class="btn btn-primary">Cập nhật email</button>
+                                </div>
+                            </form>
+                            
+                            <div class="password-section">
+                                <h3>Thay đổi mật khẩu</h3>
+                                
+                                <form class="settings-form">
+                                    <div class="form-group">
+                                        <label for="oldPassword">Mật khẩu cũ</label>
+                                        <input type="password" id="oldPassword" placeholder="Nhập mật khẩu cũ">
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="newPassword">Mật khẩu mới</label>
+                                        <input type="password" id="newPassword" placeholder="Nhập mật khẩu mới">
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="confirmPassword">Xác nhận mật khẩu</label>
+                                        <input type="password" id="confirmPassword" placeholder="Nhập lại mật khẩu mới">
+                                    </div>
+                                    
+                                    <div class="form-actions">
+                                        <button type="button" class="btn btn-outline">Hủy</button>
+                                        <button type="submit" class="btn btn-primary">Thay đổi mật khẩu</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        
+                        <div class="settings-content" id="notifications">
+                            <h2>Cài đặt thông báo</h2>
+                            <p class="section-description">Tùy chỉnh cách bạn nhận thông báo từ CodeLean.</p>
+                            
+                            <form class="settings-form">
+                                <h3>Email thông báo</h3>
+                                
+                                <div class="form-group switch-group">
+                                    <div>
+                                        <label for="courseNotifications">Khóa học</label>
+                                        <p>Nhận thông báo về tiến độ học tập và khóa học mới</p>
+                                    </div>
+                                    <label class="switch">
+                                        <input type="checkbox" id="courseNotifications" checked>
+                                        <span class="slider round"></span>
+                                    </label>
+                                </div>
+                                
+                                <div class="form-group switch-group">
+                                    <div>
+                                        <label for="practiceNotifications">Luyện tập</label>
+                                        <p>Nhận thông báo về bài tập mới và nhắc nhở luyện tập</p>
+                                    </div>
+                                    <label class="switch">
+                                        <input type="checkbox" id="practiceNotifications" checked>
+                                        <span class="slider round"></span>
+                                    </label>
+                                </div>
+                                
+                                <div class="form-group switch-group">
+                                    <div>
+                                        <label for="competitionNotifications">Thi đấu</label>
+                                        <p>Nhận thông báo về các cuộc thi sắp diễn ra và kết quả</p>
+                                    </div>
+                                    <label class="switch">
+                                        <input type="checkbox" id="competitionNotifications">
+                                        <span class="slider round"></span>
+                                    </label>
+                                </div>
+                                
+                                <div class="form-group switch-group">
+                                    <div>
+                                        <label for="newsletter">Bản tin</label>
+                                        <p>Nhận bản tin hàng tuần với nội dung và tips lập trình</p>
+                                    </div>
+                                    <label class="switch">
+                                        <input type="checkbox" id="newsletter" checked>
+                                        <span class="slider round"></span>
+                                    </label>
+                                </div>
+                                
+                                <div class="form-actions">
+                                    <button type="button" class="btn btn-outline">Hủy</button>
+                                    <button type="submit" class="btn btn-primary">Lưu cài đặt</button>
+                                </div>
+                            </form>
+                        </div>
+                        
+                        <!-- Other settings tabs would go here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer"></div>
+
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/settings.js"></script>
+</body>
+</html>

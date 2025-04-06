@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thi đấu - CodeLean</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="/assets/css/auth.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="logged-in">
+    <div id="header"></div>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="competition-page">
+                <div class="page-header">
+                    <h1>Thi đấu lập trình</h1>
+                    <p>Thử thách bản thân và cạnh tranh với các lập trình viên khác</p>
+                </div>
+                
+                <div class="competition-tabs">
+                    <ul class="tab-nav">
+                        <li class="active" data-tab="upcoming">Sắp diễn ra</li>
+                        <li data-tab="ongoing">Đang diễn ra</li>
+                        <li data-tab="past">Đã kết thúc</li>
+                        <li data-tab="my-contests">Cuộc thi của tôi</li>
+                    </ul>
+                    
+                    <div class="tab-content active" id="upcoming">
+                        <div class="competition-cards">
+                            <div class="competition-card">
+                                <div class="competition-date">
+                                    <div class="date-day">15</div>
+                                    <div class="date-month">Th10</div>
+                                </div>
+                                <div class="competition-info">
+                                    <h3><a href="#">CodeBattle Mùa Thu 2023</a></h3>
+                                    <p class="competition-description">Cuộc thi lập trình hàng tháng với các bài toán từ dễ đến khó, phù hợp với mọi trình độ.</p>
+                                    <div class="competition-meta">
+                                        <span><i class="fas fa-clock"></i> Bắt đầu sau: 2 ngày 5 giờ</span>
+                                        <span><i class="fas fa-hourglass-half"></i> Thời gian: 3 giờ</span>
+                                        <span><i class="fas fa-users"></i> Đã đăng ký: 124</span>
+                                    </div>
+                                    <div class="competition-actions">
+                                        <a href="#" class="btn btn-outline">Xem chi tiết</a>
+                                        <a href="#" class="btn btn-primary">Đăng ký ngay</a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="competition-card">
+                                <div class="competition-date">
+                                    <div class="date-day">22</div>
+                                    <div class="date-month">Th10</div>
+                                </div>
+                                <div class="competition-info">
+                                    <h3><a href="#">Algorithm Challenge #5</a></h3>
+                                    <p class="competition-description">Chuyên về thuật toán và cấu trúc dữ liệu, dành cho các lập trình viên muốn nâng cao kỹ năng.</p>
+                                    <div class="competition-meta">
+                                        <span><i class="fas fa-clock"></i> Bắt đầu sau: 9 ngày 3 giờ</span>
+                                        <span><i class="fas fa-hourglass-half"></i> Thời gian: 2 giờ</span>
+                                        <span><i class="fas fa-users"></i> Đã đăng ký: 87</span>
+                                    </div>
+                                    <div class="competition-actions">
+                                        <a href="#" class="btn btn-outline">Xem chi tiết</a>
+                                        <a href="#" class="btn btn-primary">Đăng ký ngay</a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- More upcoming competitions -->
+                        </div>
+                    </div>
+                    
+                    <div class="tab-content" id="ongoing">
+                        <div class="empty-state">
+                            <i class="fas fa-hourglass-half"></i>
+                            <h3>Hiện không có cuộc thi nào đang diễn ra</h3>
+                            <p>Hãy kiểm tra các cuộc thi sắp diễn ra hoặc đã kết thúc</p>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-content" id="past">
+                        <div class="competition-cards">
+                            <div class="competition-card">
+                                <div class="competition-date past">
+                                    <div class="date-day">30</div>
+                                    <div class="date-month">Th9</div>
+                                </div>
+                                <div class="competition-info">
+                                    <h3><a href="#">CodeBattle Mùa Hè 2023</a></h3>
+                                    <p class="competition-description">Cuộc thi lập trình hàng tháng đã kết thúc.</p>
+                                    <div class="competition-meta">
+                                        <span><i class="fas fa-trophy"></i> Người chiến thắng: Nguyễn Văn A</span>
+                                        <span><i class="fas fa-users"></i> Tham gia: 156</span>
+                                    </div>
+                                    <div class="competition-actions">
+                                        <a href="#" class="btn btn-outline">Xem kết quả</a>
+                                        <a href="#" class="btn btn-primary">Xem bài tập</a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- More past competitions -->
+                        </div>
+                    </div>
+                    
+                    <div class="tab-content" id="my-contests">
+                        <div class="empty-state">
+                            <i class="fas fa-trophy"></i>
+                            <h3>Bạn chưa tham gia cuộc thi nào</h3>
+                            <p>Đăng ký các cuộc thi sắp diễn ra để bắt đầu thi đấu</p>
+                            <a href="#" class="btn btn-primary">Xem cuộc thi sắp diễn ra</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer"></div>
+
+
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/competition.js"></script>
+</body>
+</html>

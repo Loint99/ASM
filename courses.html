@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tất cả khóa học - CodeLean</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="/assets/css/auth.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="logged-in">
+    <div id="header"></div>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="courses-page">
+                <div class="page-header">
+                    <h1>Tất cả khóa học</h1>
+                    <p>Lựa chọn khóa học phù hợp với mục tiêu của bạn</p>
+                </div>
+                
+                <div class="courses-filter">
+                    <div class="filter-group">
+                        <label for="category">Danh mục:</label>
+                        <select id="category">
+                            <option value="all">Tất cả</option>
+                            <option value="frontend">Frontend</option>
+                            <option value="backend">Backend</option>
+                            <option value="mobile">Mobile</option>
+                            <option value="algorithm">Thuật toán</option>
+                            <option value="database">Cơ sở dữ liệu</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label for="level">Cấp độ:</label>
+                        <select id="level">
+                            <option value="all">Tất cả</option>
+                            <option value="beginner">Cơ bản</option>
+                            <option value="intermediate">Trung cấp</option>
+                            <option value="advanced">Nâng cao</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label for="sort">Sắp xếp:</label>
+                        <select id="sort">
+                            <option value="popular">Phổ biến</option>
+                            <option value="newest">Mới nhất</option>
+                            <option value="rating">Đánh giá cao</option>
+                        </select>
+                    </div>
+                    
+                    <div class="search-box">
+                        <input type="text" placeholder="Tìm kiếm khóa học...">
+                        <button><i class="fas fa-search"></i></button>
+                    </div>
+                </div>
+                
+                <div class="courses-grid">
+                    <!-- Course cards will be loaded here -->
+                    <div class="course-card">
+                        <div class="course-image">
+                            <img src="/assets/images/python.png" alt="Lập trình Python cơ bản">
+                            <span class="course-level">Cơ bản</span>
+                        </div>
+                        <div class="course-content">
+                            <div class="course-category">Backend</div>
+                            <h3><a href="/course-detail-1.html">Lập trình Python cơ bản</a></h3>
+                            <p class="course-description">Học Python từ con số 0, làm chủ ngôn ngữ lập trình phổ biến nhất hiện nay.</p>
+                            <div class="course-meta">
+                                <span><i class="fas fa-user-graduate"></i> 1,200+ học viên</span>
+                                <span><i class="fas fa-star"></i> 4.8 (320 đánh giá)</span>
+                            </div>
+                            <div class="course-footer">
+                                <span class="course-price">Miễn phí</span>
+                                <a href="/course-detail-1.html" class="btn btn-primary">Xem khóa học</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="course-card">
+                        <div class="course-image">
+                            <img src="/assets/images/javascript.png" alt="Web Frontend với ReactJS">
+                            <span class="course-level">Trung cấp</span>
+                        </div>
+                        <div class="course-content">
+                            <div class="course-category">Frontend</div>
+                            <h3><a href="#">Web Frontend với JavaScript</a></h3>
+                            <p class="course-description">Xây dựng ứng dụng web hiện đại với JavaScript và các công nghệ liên quan.</p>
+                            <div class="course-meta">
+                                <span><i class="fas fa-user-graduate"></i> 850+ học viên</span>
+                                <span><i class="fas fa-star"></i> 4.9 (240 đánh giá)</span>
+                            </div>
+                            <div class="course-footer">
+                                <span class="course-price">499,000đ</span>
+                                <a href="#" class="btn btn-primary">Xem khóa học</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="course-card">
+                        <div class="course-image">
+                            <img src="/assets/images/java.png" alt="Thuật toán và Cấu trúc dữ liệu">
+                            <span class="course-level">Nâng cao</span>
+                        </div>
+                        <div class="course-content">
+                            <div class="course-category">Thuật toán</div>
+                            <h3><a href="#">Java từ cơ bản đến nâng cao</a></h3>
+                            <p class="course-description">Nắm vững thuật toán cơ bản đến nâng cao, chuẩn bị cho các kỳ thi phỏng vấn.</p>
+                            <div class="course-meta">
+                                <span><i class="fas fa-user-graduate"></i> 1,500+ học viên</span>
+                                <span><i class="fas fa-star"></i> 4.7 (410 đánh giá)</span>
+                            </div>
+                            <div class="course-footer">
+                                <span class="course-price">799,000đ</span>
+                                <a href="#" class="btn btn-primary">Xem khóa học</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="course-card">
+                        <div class="course-image">
+                            <img src="/assets/images/C.png" alt="Node.js Backend Development">
+                            <span class="course-level">Trung cấp</span>
+                        </div>
+                        <div class="course-content">
+                            <div class="course-category">Backend</div>
+                            <h3><a href="#">C cho người mới bắt đầu</a></h3>
+                            <p class="course-description">Lập trình C cho người mới bắt đầu, từ cơ bản đến nâng cao.</p>
+                            <div class="course-meta">
+                                <span><i class="fas fa-user-graduate"></i> 1,000+ học viên</span>
+                                <span><i class="fas fa-star"></i> 4.6 (380 đánh giá)</span>
+                            </div>
+                            <div class="course-footer">
+                                <span class="course-price">599,000đ</span>
+                                <a href="#" class="btn btn-primary">Xem khóa học</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="course-card">
+                        <div class="course-image">
+                            <img src="/assets/images/oopJava.png" alt="Flutter Mobile Development">
+                            <span class="course-level">Trung cấp</span>
+                        </div>
+                        <div class="course-content">
+                            <div class="course-category">Mobile</div>
+                            <h3><a href="#">Java OOP</a></h3>
+                            <p class="course-description">Lập trình hướng đối tượng trong Java (Java OOP)</p>
+                            <div class="course-meta">
+                                <span><i class="fas fa-user-graduate"></i> 700+ học viên</span>
+                                <span><i class="fas fa-star"></i> 4.8 (290 đánh giá)</span>
+                            </div>
+                            <div class="course-footer">
+                                <span class="course-price">699,000đ</span>
+                                <a href="#" class="btn btn-primary">Xem khóa học</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="course-card">
+                        <div class="course-image">
+                            <img src="/assets/images/sql.png" alt="SQL và Cơ sở dữ liệu">
+                            <span class="course-level">Cơ bản</span>
+                        </div>
+                        <div class="course-content">
+                            <div class="course-category">Database</div>
+                            <h3><a href="#">SQL và Cơ sở dữ liệu</a></h3>
+                            <p class="course-description">Làm chủ SQL và các hệ quản trị cơ sở dữ liệu quan hệ phổ biến.</p>
+                            <div class="course-meta">
+                                <span><i class="fas fa-user-graduate"></i> 900+ học viên</span>
+                                <span><i class="fas fa-star"></i> 4.5 (250 đánh giá)</span>
+                            </div>
+                            <div class="course-footer">
+                                <span class="course-price">Miễn phí</span>
+                                <a href="#" class="btn btn-primary">Xem khóa học</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="pagination">
+                    <a href="#" class="page-item disabled"><i class="fas fa-chevron-left"></i></a>
+                    <a href="#" class="page-item active">1</a>
+                    <a href="#" class="page-item">2</a>
+                    <a href="#" class="page-item">3</a>
+                    <a href="#" class="page-item"><i class="fas fa-chevron-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer"></div>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/courses.js"></script>
+</body>
+</html>

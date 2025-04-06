@@ -3,272 +3,166 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CodeLean - Học Lập Trình Hiệu Quả</title>
-    <link rel="stylesheet" href="/ASM/styles.css">
+    <title>CodeLean - Học lập trình trực tuyến</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <div class="container header-container">
-            <div class="logo">
-                <a href="#trang-chu">Code<span>Lean</span></a>
-            </div>
-            <nav class="desktop-nav">
-                <ul class="nav-menu">
-                    <li><a href="#trang-chu" class="nav-link active">Trang chủ</a></li>
-                    <li><a href="#khoa-hoc" class="nav-link">Khóa học</a></li>
-                    <li><a href="#tinh-nang" class="nav-link">Tính năng</a></li>
-                    <li><a href="#danh-gia" class="nav-link">Đánh giá</a></li>
-                </ul>
-                <div class="auth-buttons">
-                    <button class="login-btn">Đăng nhập</button>
-                    <button class="signup-btn">Đăng ký</button>
-                </div>
-            </nav>
-            <button class="mobile-menu-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-    </header>
+    <div id="header"></div>
 
-    <!-- Mobile Menu -->
-    <div class="mobile-menu">
-        <ul>
-            <li><a href="#trang-chu" class="mobile-nav-link active">Trang chủ</a></li>
-            <li><a href="#khoa-hoc" class="mobile-nav-link">Khóa học</a></li>
-            <li><a href="#tinh-nang" class="mobile-nav-link">Tính năng</a></li>
-            <li><a href="#danh-gia" class="mobile-nav-link">Đánh giá</a></li>
-        </ul>
-        <div class="mobile-auth-buttons">
-            <button class="login-btn">Đăng nhập</button>
-            <button class="signup-btn">Đăng ký</button>
-        </div>
-    </div>
-
-    <!-- Main Content -->
-    <main>
-        <!-- Hero Section -->
-        <section id="trang-chu" class="hero">
-            <div class="container">
-                <div class="hero-content">
-                    <h1>Học lập trình <span class="highlight">hiệu quả</span> cùng CodeLean</h1>
-                    <p>Nền tảng học lập trình trực tuyến với lộ trình bài bản, giúp bạn thành thạo kỹ năng chỉ sau 3-6 tháng</p>
-                    <div class="hero-buttons">
-                        <a href="#khoa-hoc" class="primary-btn">Khám phá khóa học</a>
-                        <a href="#tinh-nang" class="secondary-btn">Tìm hiểu thêm</a>
-                    </div>
-                </div>
-                <div class="hero-image">
-                    <img src="https://timviectot.net/upload/img/2024/03/23/13-1711160937.png" alt="Học lập trình tại CodeLean">
-                </div>
-            </div>
-        </section>
-
-        <!-- Courses Section -->
-        <section id="khoa-hoc" class="courses">
-            <div class="container">
-                <h2 class="section-title">Khóa học <span>nổi bật</span></h2>
-                <div class="course-grid">
-                    <!-- Course Card 1 -->
-                    <div class="course-card">
-                        <div class="course-image" style="background-color: #e74c3c;">
-                            <span>Java</span>
-                        </div>
-                        <div class="course-info">
-                            <h3>Java từ cơ bản đến nâng cao</h3>
-                            <p>Miễn phí</p>
-                            <div class="course-meta">
-                                <span class="lessons">48 bài học</span>
-                                <span class="rating">4.9★ (1.2k đánh giá)</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Course Card 2 -->
-                    <div class="course-card">
-                        <div class="course-image" style="background-color: #3498db;">
-                            <span>C++</span>
-                        </div>
-                        <div class="course-info">
-                            <h3>Lập trình C++ cơ bản</h3>
-                            <p>Miễn phí</p>
-                            <div class="course-meta">
-                                <span class="lessons">36 bài học</span>
-                                <span class="rating">4.8★ (980 đánh giá)</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Course Card 3 -->
-                    <div class="course-card">
-                        <div class="course-image" style="background-color: #2ecc71;">
-                            <span>Python</span>
-                        </div>
-                        <div class="course-info">
-                            <h3>Python cho người mới bắt đầu</h3>
-                            <p>Miễn phí</p>
-                            <div class="course-meta">
-                                <span class="lessons">72 bài học</span>
-                                <span class="rating">4.9★ (2.1k đánh giá)</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Features Section -->
-        <section id="tinh-nang" class="features">
-            <div class="container">
-                <h2 class="section-title">Tại sao chọn <span>CodeLean?</span></h2>
-                <div class="feature-grid">
-                    <div class="feature-card">
-                        <div class="feature-icon">📚</div>
-                        <h3>Nội dung cập nhật</h3>
-                        <p>Giáo trình luôn được cập nhật theo xu hướng công nghệ mới nhất</p>
-                    </div>
-                    
-                    <div class="feature-card">
-                        <div class="feature-icon">👨‍🏫</div>
-                        <h3>Giảng viên kinh nghiệm</h3>
-                        <p>Học từ chuyên gia có 5+ năm kinh nghiệm tại các công ty lớn</p>
-                    </div>
-                    
-                    <div class="feature-card">
-                        <div class="feature-icon">💻</div>
-                        <h3>Học mọi lúc mọi nơi</h3>
-                        <p>Truy cập bài học 24/7 trên mọi thiết bị</p>
-                    </div>
-                    
-                    <div class="feature-card">
-                        <div class="feature-icon">🎓</div>
-                        <h3>Chứng chỉ hoàn thành</h3>
-                        <p>Nhận chứng chỉ có giá trị sau mỗi khóa học</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Testimonials Section -->
-        <section id="danh-gia" class="testimonials">
-            <div class="container">
-                <h2 class="section-title">Học viên <span>nói gì</span></h2>
-                <div class="testimonial-grid">
-                    <div class="testimonial-card">
-                        <div class="testimonial-content">
-                            <p>"Khóa học Frontend tại CodeLean đã giúp tôi thay đổi sự nghiệp từ một nhân viên văn phòng thành lập trình viên với mức lương cao hơn gấp 3 lần."</p>
-                        </div>
-                        <div class="testimonial-author">
-                            <div class="author-avatar">TN</div>
-                            <div class="author-info">
-                                <h4>Trần Ngọc</h4>
-                                <p>Frontend Developer tại FPT Software</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="testimonial-card">
-                        <div class="testimonial-content">
-                            <p>"Phương pháp dạy thực chiến giúp tôi nắm bắt kiến thức nhanh chóng. Tôi đã tự tin ứng tuyển sau khi hoàn thành khóa học."</p>
-                        </div>
-                        <div class="testimonial-author">
-                            <div class="author-avatar">LM</div>
-                            <div class="author-info">
-                                <h4>Lê Minh</h4>
-                                <p>Backend Developer tại Viettel</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer>
+    <section class="hero">
         <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <h3>CodeLean</h3>
-                    <p>CodeLearn là nền tảng tương tác trực tuyến hỗ trợ người dùng học tập, thực hành, thi đấu và đánh giá kỹ năng lập trình một cách nhanh chóng và chính xác.</p>
+            <div class="hero-content">
+                <h1>Học lập trình hiệu quả cùng CodeLean</h1>
+                <p>Nền tảng học lập trình trực tuyến với phương pháp học tập tương tác, thực hành ngay trên trình duyệt.</p>
+                <div class="hero-buttons">
+                    <a href="#khoa-hoc" class="btn btn-primary btn-large">Bắt đầu học ngay</a>
+                    <a href="#features" class="btn btn-outline btn-large">Tìm hiểu thêm</a>
                 </div>
-                <div class="footer-col">
-                    <h3>Khóa học</h3>
-                    <ul>
-                        <li><a href="#khoa-hoc">Frontend</a></li>
-                        <li><a href="#khoa-hoc">Backend</a></li>
-                        <li><a href="#khoa-hoc">Fullstack</a></li>
-                    </ul>
+            </div>
+            <!-- <div class="hero-image">
+                <img src="" alt="">
+            </div> -->
+        </div>
+    </section>
+
+    <section id="khoa-hoc" class="popular-courses">
+        <div class="container">
+            <h2 class="section-title">Khóa học nổi bật</h2>
+            <div class="courses-grid">
+                <div class="course-card">
+                    <div class="course-image">
+                        <img src="/assets/images/python.png" alt="Lập trình Python cơ bản">
+                        <span class="course-level">Cơ bản</span>
+                    </div>
+                    <div class="course-content">
+                        <h3><a href="course-detail-1.html">Lập trình Python cơ bản</a></h3>
+                        <p class="course-description">Học Python từ con số 0, làm chủ ngôn ngữ lập trình phổ biến nhất hiện nay.</p>
+                        <div class="course-meta">
+                            <span><i class="fas fa-user-graduate"></i> 1,200+ học viên</span>
+                            <span><i class="fas fa-star"></i> 4.8 (320 đánh giá)</span>
+                        </div>
+                        <a href="/course-detail-1.html" class="btn btn-outline">Xem chi tiết</a>
+                    </div>
                 </div>
-                <div class="footer-col">
-                    <h3>Liên kết</h3>
-                    <ul>
-                        <li><a href="#trang-chu">Trang chủ</a></li>
-                        <li><a href="#tinh-nang">Tính năng</a></li>
-                        <li><a href="#danh-gia">Đánh giá</a></li>
-                    </ul>
+                
+                <div class="course-card">
+                    <div class="course-image">
+                        <img src="/assets/images/javascript.png" alt="Web Frontend với Javascript">
+                        <span class="course-level">Trung cấp</span>
+                    </div>
+                    <div class="course-content">
+                        <h3><a href="#">Web Frontend với Javascript</a></h3>
+                        <p class="course-description">Xây dựng ứng dụng web hiện đại với Javascript và các công nghệ liên quan.</p>
+                        <div class="course-meta">
+                            <span><i class="fas fa-user-graduate"></i> 850+ học viên</span>
+                            <span><i class="fas fa-star"></i> 4.9 (240 đánh giá)</span>
+                        </div>
+                        <a href="#" class="btn btn-outline">Xem chi tiết</a>
+                    </div>
                 </div>
-                <div class="footer-col">
-                    <h3>Kết nối</h3>
-                    <div class="social-links">
-                        <a href="#" aria-label="Facebook">FB</a>
-                        <a href="#" aria-label="YouTube">YT</a>
-                        <a href="#" aria-label="GitHub">GH</a>
+                
+                <div class="course-card">
+                    <div class="course-image">
+                        <img src="/assets/images/java.png" alt="Java">
+                        <span class="course-level">Nâng cao</span>
+                    </div>
+                    <div class="course-content">
+                        <h3><a href="#">Java cơ bản đến nâng cao</a></h3>
+                        <p class="course-description">Nắm vững thuật toán cơ bản đến nâng cao, chuẩn bị cho các kỳ thi phỏng vấn.</p>
+                        <div class="course-meta">
+                            <span><i class="fas fa-user-graduate"></i> 1,500+ học viên</span>
+                            <span><i class="fas fa-star"></i> 4.7 (410 đánh giá)</span>
+                        </div>
+                        <a href="#" class="btn btn-outline">Xem chi tiết</a>
                     </div>
                 </div>
             </div>
-            <div class="copyright">
-                <p>&copy; 2023 CodeLean. All rights reserved.</p>
+            <div class="text-center">
+                <a href="/courses.html" class="btn btn-primary">Xem tất cả khóa học</a>
             </div>
         </div>
-    </footer>
+    </section>
 
-    <!-- Modals -->
-    <div class="modal-overlay" id="modalOverlay"></div>
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">Tại sao chọn CodeLean?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Học qua thực hành</h3>
+                    <p>Thực hành ngay trên trình duyệt với hệ thống bài tập đa dạng và hệ thống chấm điểm tự động.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3>Thi đấu lập trình</h3>
+                    <p>Tham gia các cuộc thi lập trình để nâng cao kỹ năng và cạnh tranh với cộng đồng.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Theo dõi tiến độ</h3>
+                    <p>Hệ thống theo dõi tiến độ học tập chi tiết giúp bạn đánh giá được năng lực của mình.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Cộng đồng hỗ trợ</h3>
+                    <p>Kết nối với cộng đồng lập trình viên để cùng học hỏi và phát triển.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <div class="modal" id="loginModal">
-        <button class="modal-close">&times;</button>
-        <h2>Đăng nhập</h2>
-        <form id="loginForm">
-            <div class="form-group">
-                <input type="email" placeholder="Email" required>
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">Học viên nói gì về chúng tôi</h2>
+            <div class="testimonials-slider">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"CodeLean giúp tôi có được công việc đầu tiên với vị trí Frontend Developer chỉ sau 6 tháng học tập. Phương pháp học qua thực hành rất hiệu quả."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="/assets/images/avatar-1.png" alt="Nguyễn Văn A">
+                        <div>
+                            <h4>Nguyễn Văn A</h4>
+                            <span>Frontend Developer tại FPT Software</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"Tôi đã thử nhiều nền tảng học lập trình nhưng CodeLean là nơi giúp tôi tiến bộ nhanh nhất nhờ hệ thống bài tập thực tế và cộng đồng hỗ trợ nhiệt tình."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="/assets/images/avatar-2.png" alt="Trần Thị B">
+                        <div>
+                            <h4>Trần Thị B</h4>
+                            <span>Sinh viên Đại học Bách Khoa Hà Nội</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="form-group">
-                <input type="password" placeholder="Mật khẩu" required>
-            </div>
-            <button type="submit" class="primary-btn">Đăng nhập</button>
-            <div class="form-footer">
-                <a href="#" id="showSignup">Chưa có tài khoản? Đăng ký</a>
-                <a href="#">Quên mật khẩu?</a>
-            </div>
-        </form>
-    </div>
+        </div>
+    </section>
 
-    <div class="modal" id="signupModal">
-        <button class="modal-close">&times;</button>
-        <h2>Đăng ký</h2>
-        <form id="signupForm">
-            <div class="form-group">
-                <input type="text" placeholder="Họ và tên" required>
-            </div>
-            <div class="form-group">
-                <input type="email" placeholder="Email" required>
-            </div>
-            <div class="form-group">
-                <input type="password" placeholder="Mật khẩu" required>
-            </div>
-            <div class="form-group">
-                <input type="password" placeholder="Nhập lại mật khẩu" required>
-            </div>
-            <button type="submit" class="primary-btn">Đăng ký</button>
-            <div class="form-footer">
-                <a href="#" id="showLogin">Đã có tài khoản? Đăng nhập</a>
-            </div>
-        </form>
-    </div>
+    <section class="cta">
+        <div class="container">
+            <h2>Sẵn sàng bắt đầu hành trình lập trình của bạn?</h2>
+            <p>Tham gia cùng hơn 10,000 học viên đang học tập và phát triển trên CodeLean</p>
+            <a href="register.html" class="btn btn-primary btn-large">Đăng ký ngay</a>
+        </div>
+    </section>
 
-    <script src="/ASM/script.js"></script>
+    <div id="footer"></div>
+
+    <script src="assets/js/main.js"></script>
 </body>
 </html>

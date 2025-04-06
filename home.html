@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang chủ - CodeLean</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="/assets/css/auth.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="logged-in">
+    <div id="header"></div>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="dashboard">
+                <div class="dashboard-header">
+                    <h1>Chào mừng trở lại, Nguyễn Văn A!</h1>
+                    <p>Tiếp tục hành trình học lập trình của bạn</p>
+                </div>
+                
+                <div class="dashboard-grid">
+                    <div class="dashboard-main">
+                        <section class="current-courses">
+                            <div class="section-header">
+                                <h2>Khóa học của bạn</h2>
+                                <a href="/courses.html" class="btn btn-outline">Xem tất cả</a>
+                            </div>
+                            
+                            <div class="courses-grid">
+                                <div class="course-card">
+                                    <div class="course-progress">
+                                        <div class="progress-bar" style="width: 65%"></div>
+                                        <span>65% hoàn thành</span>
+                                    </div>
+                                    <div class="course-image">
+                                        <img src="/assets/images/python.png" alt="Lập trình Python cơ bản">
+                                        <span class="course-level">Cơ bản</span>
+                                    </div>
+                                    <div class="course-content">
+                                        <h3><a href="/course-detail-1.html">Lập trình Python cơ bản</a></h3>
+                                        <p class="course-description">Học Python từ con số 0, làm chủ ngôn ngữ lập trình phổ biến nhất hiện nay.</p>
+                                        <div class="course-meta">
+                                            <span><i class="fas fa-book-open"></i> 12/20 bài học</span>
+                                            <span><i class="fas fa-clock"></i> 15h học</span>
+                                        </div>
+                                        <a href="/course-detail-1.html" class="btn btn-primary">Tiếp tục học</a>
+                                    </div>
+                                </div>
+                                
+                                <div class="course-card">
+                                    <div class="course-progress">
+                                        <div class="progress-bar" style="width: 30%"></div>
+                                        <span>30% hoàn thành</span>
+                                    </div>
+                                    <div class="course-image">
+                                        <img src="/assets/images/javascript.png" alt="Web Frontend với JavaScript">
+                                        <span class="course-level">Trung cấp</span>
+                                    </div>
+                                    <div class="course-content">
+                                        <h3><a href="#">Web Frontend với JavaScript</a></h3>
+                                        <p class="course-description">Xây dựng ứng dụng web hiện đại với JavaScript và các công nghệ liên quan.</p>
+                                        <div class="course-meta">
+                                            <span><i class="fas fa-book-open"></i> 6/20 bài học</span>
+                                            <span><i class="fas fa-clock"></i> 8h học</span>
+                                        </div>
+                                        <a href="#" class="btn btn-primary">Tiếp tục học</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <section class="upcoming-events">
+                            <div class="section-header">
+                                <h2>Sự kiện sắp tới</h2>
+                                <a href="#" class="btn btn-outline">Xem tất cả</a>
+                            </div>
+                            
+                            <div class="events-grid">
+                                <div class="event-card">
+                                    <div class="event-date">
+                                        <span class="day">15</span>
+                                        <span class="month">Th10</span>
+                                    </div>
+                                    <div class="event-content">
+                                        <h3><a href="#">Cuộc thi lập trình CodeBattle mùa thu</a></h3>
+                                        <p class="event-description">Thử thách kỹ năng giải thuật của bạn trong cuộc thi kéo dài 3 giờ với nhiều giải thưởng hấp dẫn.</p>
+                                        <div class="event-meta">
+                                            <span><i class="fas fa-clock"></i> 14:00 - 17:00</span>
+                                            <span><i class="fas fa-users"></i> 120 đã đăng ký</span>
+                                        </div>
+                                        <a href="#" class="btn btn-outline">Đăng ký tham gia</a>
+                                    </div>
+                                </div>
+                                
+                                <div class="event-card">
+                                    <div class="event-date">
+                                        <span class="day">22</span>
+                                        <span class="month">Th10</span>
+                                    </div>
+                                    <div class="event-content">
+                                        <h3><a href="#">Workshop: Chuẩn bị cho phỏng vấn FAANG</a></h3>
+                                        <p class="event-description">Chia sẻ từ chuyên gia với 5 năm kinh nghiệm tại Google về cách chuẩn bị cho phỏng vấn kỹ thuật.</p>
+                                        <div class="event-meta">
+                                            <span><i class="fas fa-clock"></i> 19:00 - 21:00</span>
+                                            <span><i class="fas fa-users"></i> 85 đã đăng ký</span>
+                                        </div>
+                                        <a href="#" class="btn btn-outline">Đăng ký tham gia</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    
+                    <div class="dashboard-sidebar">
+                        <section class="user-stats">
+                            <div class="stats-card">
+                                <div class="stats-icon">
+                                    <i class="fas fa-medal"></i>
+                                </div>
+                                <div class="stats-content">
+                                    <h3>Xếp hạng</h3>
+                                    <p class="stats-value">#124</p>
+                                    <a href="/leaderboard.html" class="stats-link">Xem bảng xếp hạng</a>
+                                </div>
+                            </div>
+                            
+                            <div class="stats-card">
+                                <div class="stats-icon">
+                                    <i class="fas fa-fire"></i>
+                                </div>
+                                <div class="stats-content">
+                                    <h3>Chuỗi ngày học</h3>
+                                    <p class="stats-value">7 ngày</p>
+                                    <a href="#" class="stats-link">Tiếp tục phát huy</a>
+                                </div>
+                            </div>
+                            
+                            <div class="stats-card">
+                                <div class="stats-icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <div class="stats-content">
+                                    <h3>Bài tập hoàn thành</h3>
+                                    <p class="stats-value">48 bài</p>
+                                    <a href="#" class="stats-link">Xem chi tiết</a>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <section class="recommended-courses">
+                            <h3>Khóa học đề xuất</h3>
+                            <div class="recommended-course">
+                                <div class="course-image">
+                                    <img src="/assets/images/java.png" alt="Java cơ bản đến nâng cao">
+                                </div>
+                                <div class="course-content">
+                                    <h4><a href="#">Java cơ bản đến nâng cao</a></h4>
+                                    <div class="course-meta">
+                                        <span><i class="fas fa-star"></i> 4.7</span>
+                                        <span><i class="fas fa-user-graduate"></i> 1.5k</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="recommended-course">
+                                <div class="course-image">
+                                    <img src="/assets/images/C.png" alt="C cho người mới bắt đầu">
+                                </div>
+                                <div class="course-content">
+                                    <h4><a href="#">C cho người mới bắt đầu</a></h4>
+                                    <div class="course-meta">
+                                        <span><i class="fas fa-star"></i> 4.8</span>
+                                        <span><i class="fas fa-user-graduate"></i> 1.2k</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="text-center">
+                                <a href="courses.html" class="btn btn-outline btn-small">Xem thêm</a>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer"></div>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/auth.js"></script>
+</body>
+</html>

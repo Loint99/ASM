@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luyện tập - CodeLean</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="/assets/css/auth.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- CodeMirror for code editor -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/theme/dracula.min.css">
+</head>
+<body class="logged-in">
+    <div id="header"></div>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="practice-page">
+                <div class="page-header">
+                    <h1>Luyện tập lập trình</h1>
+                    <p>Cải thiện kỹ năng lập trình của bạn với các bài tập từ cơ bản đến nâng cao</p>
+                </div>
+                
+                <div class="practice-grid">
+                    <div class="practice-sidebar">
+                        <div class="sidebar-card">
+                            <h3>Danh mục bài tập</h3>
+                            <ul class="category-list">
+                                <li class="active"><a href="#">Tất cả</a></li>
+                                <li><a href="#">Cơ bản</a></li>
+                                <li><a href="#">Mảng</a></li>
+                                <li><a href="#">Chuỗi</a></li>
+                                <li><a href="#">Đệ quy</a></li>
+                                <li><a href="#">Sắp xếp</a></li>
+                                <li><a href="#">Tìm kiếm</a></li>
+                                <li><a href="#">Cấu trúc dữ liệu</a></li>
+                                <li><a href="#">Thuật toán</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="sidebar-card">
+                            <h3>Ngôn ngữ</h3>
+                            <select class="language-select">
+                                <option value="python">Python</option>
+                                <option value="javascript">JavaScript</option>
+                                <option value="java">Java</option>
+                                <option value="csharp">C#</option>
+                                <option value="cpp">C++</option>
+                            </select>
+                        </div>
+                        
+                        <div class="sidebar-card progress-card">
+                            <h3>Tiến độ của bạn</h3>
+                            <div class="progress-item">
+                                <span>Bài tập đã hoàn thành</span>
+                                <span class="progress-value">24/100</span>
+                            </div>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar" style="width: 24%"></div>
+                            </div>
+                            
+                            <div class="progress-item">
+                                <span>Độ khó trung bình</span>
+                                <span class="progress-value">3.2/5</span>
+                            </div>
+                            
+                            <div class="progress-item">
+                                <span>Điểm số</span>
+                                <span class="progress-value">1,250</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="practice-main">
+                        <div class="problem-container">
+                            <div class="problem-header">
+                                <h2>Bài 15: Đảo ngược chuỗi</h2>
+                                <div class="problem-meta">
+                                    <span class="difficulty easy">Dễ</span>
+                                    <span><i class="fas fa-user-graduate"></i> 85% hoàn thành</span>
+                                </div>
+                            </div>
+                            
+                            <div class="problem-content">
+                                <h3>Mô tả bài toán</h3>
+                                <p>Viết một hàm nhận vào một chuỗi và trả về chuỗi đảo ngược của nó.</p>
+                                
+                                <h3>Ví dụ</h3>
+                                <div class="example">
+                                    <p><strong>Input:</strong> "hello"</p>
+                                    <p><strong>Output:</strong> "olleh"</p>
+                                </div>
+                                
+                                <div class="example">
+                                    <p><strong>Input:</strong> "CodeLean"</p>
+                                    <p><strong>Output:</strong> "naeLedoC"</p>
+                                </div>
+                                
+                                <h3>Ràng buộc</h3>
+                                <ul class="constraints">
+                                    <li>Độ dài chuỗi ≤ 1000</li>
+                                    <li>Chuỗi chỉ chứa các ký tự ASCII in được</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="editor-container">
+                            <div class="editor-toolbar">
+                                <select class="language-select">
+                                    <option value="python">Python</option>
+                                    <option value="javascript">JavaScript</option>
+                                    <option value="java">Java</option>
+                                    <option value="csharp">C#</option>
+                                    <option value="cpp">C++</option>
+                                </select>
+                                
+                                <div class="toolbar-buttons">
+                                    <button class="btn btn-outline btn-small"><i class="fas fa-redo"></i> Làm lại</button>
+                                    <button class="btn btn-outline btn-small"><i class="fas fa-lightbulb"></i> Gợi ý</button>
+                                    <button class="btn btn-primary btn-small"><i class="fas fa-play"></i> Chạy thử</button>
+                                    <button class="btn btn-success btn-small"><i class="fas fa-check"></i> Nộp bài</button>
+                                </div>
+                            </div>
+                            
+                            <div class="code-editor">
+                                <textarea id="codeEditor">def reverse_string(s):
+    # Viết code của bạn ở đây
+    pass</textarea>
+                            </div>
+                            
+                            <div class="editor-footer">
+                                <div class="test-cases">
+                                    <h4>Test cases:</h4>
+                                    <div class="test-case active">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Test case 1</span>
+                                    </div>
+                                    <div class="test-case">
+                                        <i class="far fa-circle"></i>
+                                        <span>Test case 2</span>
+                                    </div>
+                                    <div class="test-case">
+                                        <i class="far fa-circle"></i>
+                                        <span>Test case 3</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="output-container">
+                                    <h4>Kết quả:</h4>
+                                    <div class="output-content">
+                                        <p>Chạy chương trình để xem kết quả</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer"></div>
+
+    <!-- CodeMirror JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/mode/python/python.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/mode/javascript/javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/mode/clike/clike.min.js"></script>
+    
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/practice.js"></script>
+</body>
+</html>
