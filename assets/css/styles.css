@@ -116,9 +116,15 @@ ul {
   background: var(--white-color);
   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
   height: 70px;
-  position: sticky;
+  position: fixed; /* Thay từ sticky thành fixed */
   top: 0;
+  left: 0; /* Đảm bảo kéo dài toàn màn hình */
+  width: 100%; /* Chiếm toàn bộ chiều rộng */
   z-index: 1000;
+}
+
+main {
+  margin-top: 70px; /* Bằng chiều cao của header */
 }
 
 .header-container {
@@ -905,6 +911,10 @@ body.logged-in .user-view {
 }
 
 @media (max-width: 768px) {
+  .site-header {
+    height: 60px; /* Giảm chiều cao trên mobile */
+  }
+  
   .hamburger {
     display: block;
   }
@@ -937,6 +947,10 @@ body.logged-in .user-view {
 
   .header-container {
     padding: 0 15px;
+  }
+
+  main {
+    margin-top: 60px; /* Điều chỉnh margin trên mobile */
   }
 
   .guest-view {
@@ -978,6 +992,14 @@ body.logged-in .user-view {
 }
 
 @media (max-width: 576px) {
+  .site-header {
+    height: 60px;
+  }
+
+  main {
+    margin-top: 60px;
+  }
+  
   .container {
     max-width: 540px;
     padding: 0 10px;
