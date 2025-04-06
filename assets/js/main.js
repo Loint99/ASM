@@ -88,8 +88,8 @@ const DOM = {
    * Load HTML templates (header, footer)
    */
   function loadTemplates() {
-    loadHTML('header', '/layout/header.html');
-    loadHTML('footer', '/layout/footer.html');
+    loadHTML('header', 'layout/header.html');
+    loadHTML('footer', 'layout/footer.html');
   }
   
   /**
